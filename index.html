@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>UOC Travels</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#home" class="logo-link" aria-label="Go to home">
+          <img src="assets/img/logo.png" alt="UOC Travels logo" class="logo" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Open navigation menu"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinies">Destinies</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <h1>Welcome!</h1>
+          <p>Fly with us!!!</p>
+          <a href="#destinies" class="primary-button">Discover destinies</a>
+        </div>
+      </section>
+
+      <section class="section destinies-section" id="destinies">
+        <div class="section-header">
+          <h2>Our destinies</h2>
+          <p>
+            With us you can fly to more than 100 international destinations. You
+            just have to choose the city you want to visit, and we will take
+            care of everything for you. You've been dreaming of your ideal
+            vacation for a long time, let us make it a reality!
+          </p>
+        </div>
+
+        <div class="cards-grid" id="destinations-container">
+          <p class="loading-message">Loading destinies...</p>
+        </div>
+      </section>
+
+      <section class="section experiences-section" id="experiences">
+        <div class="section-header">
+          <h2>Our experiences</h2>
+          <p>
+            Life is made of great moments, let us create them for you. We design
+            unique experiences that will leave you with unforgettable memories.
+            Whether you prefer cultural tourism or if you just want to relax and
+            enjoy nature, we have hundreds of possibilities for you.
+          </p>
+        </div>
+
+        <div class="cards-grid" id="experiences-container">
+          <p class="loading-message">Loading experiences...</p>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2>Contact info</h2>
+
+            <h3>UOC Travels</h3>
+
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:info@uoctravels.com">info@uoctravels.com</a>
+            </p>
+
+            <p>
+              <strong>Phone:</strong>
+              +34 123 456 789
+            </p>
+
+            <h3 class="contact-subtitle">Where we are?</h3>
+            <h3 class="contact-subtitle">Follow us in</h3>
+            
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <h2>Contact us</h2>
+
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message"
+              required
+            ></textarea>
+
+            <button type="submit" class="primary-button">Send message</button>
+
+            <p class="form-message" id="form-message"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        UOC Travels - Irene Pascual Moreno
+      </p>
+    </footer>
+
+    <div class="modal" id="destination-modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close" aria-label="Close modal">
+          ×
+        </button>
+
+        <img src="" alt="" id="modal-image" />
+
+        <div class="modal-text">
+          <h2 id="modal-title"></h2>
+          <p id="modal-location"></p>
+          <p id="modal-duration"></p>
+          <p id="modal-description"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/destinos.js"></script>
+    <script src="js/experiencias.js"></script>
+    <script src="js/contacto.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
